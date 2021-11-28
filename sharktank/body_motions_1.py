@@ -406,13 +406,13 @@ def head_yes():
     head_right= 60
     head_center= 90
     
-    kit.servo[3].angle = head_center
-    for x in range(head_up,head_down,1):
+    #kit.servo[3].angle = head_center
+    for x in range(head_up,head_down,-1):
         print("HEAD DOWN")
         kit.servo[4].angle = x
         sleep(0.018)
     
-    for x in range(head_down,head_up,-1):
+    for x in range(head_down,head_up,1):
         print("HEAD UP")
         kit.servo[4].angle = x
         sleep(0.018)
@@ -440,72 +440,32 @@ def head_no():
     head_right= 60
     head_center= 90
     
-    for x in range(head_center,head_left1,1):
+    for x in range(head_center,head_left,1):
         print("HEAD right")
         kit.servo[3].angle = x
         sleep(0.018)
-    for x in range(head_left1,head_center,-1):
+    for x in range(head_left,head_center,-1):
         print("HEAD center")
         kit.servo[3].angle = x
         sleep(0.018)
-    for x in range(head_center,head_right1,-1):
+    for x in range(head_center,head_right,-1):
         print("HEAD left")
         kit.servo[3].angle = x
         sleep(0.018)
-    for x in range(head_right1,head_center,1):
+    for x in range(head_right,head_center,1):
         print("HEAD center")
         kit.servo[3].angle = x
         sleep(0.018)
 
-
-def motor_test():
-
-
-    import time
-
-    #Motor Imports
-    from time import sleep
-
-    import threading
-    from adafruit_servokit import ServoKit 
-    import adafruit_motor.servo
-
-    kit = ServoKit(channels=16)
-
-
-    left_shoulder_down = 0
-    left_shoulder_up = 50
-
-
-    left_elbow_down = 170
-    left_elbow_up = 20
-
-    left_elbow_center =50
-    left_elbow_left = 70     
-    left_elbow_right = 130
-
-
-
-
-    #kit.servo[8].angle = left_elbow_center        
-    for x in range(left_elbow_center,left_elbow_left,-1):
-        
-        kit.servo[8].angle = x
-        sleep(0.018)
-
-    for x in range(left_elbow_left,left_elbow_center,1):
-        
-        kit.servo[8].angle = x
-        sleep(0.018)
 
 
     
 if __name__ == "__main__":
     
-    shake_hand_left()
+    #shake_hand_left()
     #wave_hand_left()
     #shake_hand_right()
     #wave_hand_right()
-    #head_yes()
-    #head_no()
+    head_yes()
+    head_no()
     
