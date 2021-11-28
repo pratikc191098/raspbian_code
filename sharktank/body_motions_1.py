@@ -242,30 +242,17 @@ def shake_hand_left():
         sleep(0.0001)
     
     #if "__name__" == "__main__":
-	
-    kit.servo[6].angle = 110
-    kit.servo[7].angle = 110
-    print("bbb")
-    kit.servo[6].angle = 120
-    kit.servo[7].angle = 120
-    print("bbb")
-    sleep(1)
-
-    kit.servo[6].angle = 110
-    kit.servo[7].angle = 110
-
-    sleep(2)
-
-    kit.servo[6].angle = 90
-    kit.servo[7].angle = 90
-	
-    sleep(1)
-
-    kit.servo[6].angle = 110
-    kit.servo[7].angle = 110
-
-    sleep(1)
     
+    kit.servo[7].angle = 110
+    kit.servo[6].angle = 110
+    sleep(1)
+    kit.servo[7].angle = 85
+    kit.servo[6].angle = 85
+    sleep(1)
+    kit.servo[7].angle = 100
+    kit.servo[6].angle = 100
+    sleep(1 )
+        
     '''for x in range(left_thumb_close,left_thumb_open,1):
         print("THUMB OPEN")
         kit.servo[7].angle = x
@@ -506,9 +493,9 @@ def motor_test():
     
 if __name__ == "__main__":
     
-    #shake_hand_left()
+    shake_hand_left()
     #wave_hand_left()
-    shake_hand_right()
+    #shake_hand_right()
     #wave_hand_right()
     #head_yes()
     #head_no()

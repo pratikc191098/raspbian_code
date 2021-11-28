@@ -14,12 +14,18 @@ kit = ServoKit(channels=16)
 
 
 def test3():
-    kit.servo[14].angle = 0
-    sleep(0.5)
-    kit.servo[14].angle = 90
-    sleep(0.5)
-    kit.servo[14].angle = 0
-    sleep(0.5)
+
+  
+    
+    kit.servo[7].angle = 110
+    kit.servo[6].angle = 110
+    sleep(1)
+    kit.servo[7].angle = 85
+    kit.servo[6].angle = 85
+    sleep(1)
+    kit.servo[7].angle = 100
+    kit.servo[6].angle = 100
+    sleep(1 )
     
     
     '''for x in range(180,0,-1):
