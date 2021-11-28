@@ -309,7 +309,7 @@ def shake_hand_right():
 
     for x in range(right_elbow_down,right_elbow_up,-1):
         print(" right elbow UP")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
 
 
@@ -317,7 +317,7 @@ def shake_hand_right():
 
     for x in range(right_elbow_up,right_elbow_down,1):
         print(" right elbow down")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
 
 

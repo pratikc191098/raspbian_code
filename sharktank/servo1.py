@@ -11,9 +11,16 @@ import adafruit_motor.servo
 kit = ServoKit(channels=16)
 #pca.frequency = 60
 
-    
+
+
 def test3():
-    kit.servo[5].angle = 65
+    kit.servo[14].angle = 0
+    sleep(0.5)
+    kit.servo[14].angle = 90
+    sleep(0.5)
+    kit.servo[14].angle = 0
+    sleep(0.5)
+    
     
     '''for x in range(180,0,-1):
         
@@ -30,7 +37,7 @@ def test3():
         
 def test4():
     
-    for x in range(0,180,1):
+    '''for x in range(0,180,1):
         
         kit.servo[12].angle = x
         sleep(0.00001)
@@ -39,7 +46,7 @@ def test4():
     for x in range(180, 0,-1):
         kit.servo[12].angle = x
         sleep(0.00001)
-        print(x)
+        print(x)'''
     
         
 def run_motor():

@@ -48,7 +48,7 @@ def shake_hand_right():
 
     for x in range(right_elbow_down,right_elbow_up,1):
         print(" right elbow UP")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
         
     def palm_close():
@@ -84,7 +84,7 @@ def shake_hand_right():
     
     for x in range(right_elbow_up,right_elbow_down,-1):
         print(" right elbow down")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
 
 
@@ -131,7 +131,7 @@ def wave_hand_right():
 
     for x in range(right_elbow_down,right_elbow_up,1):
         print(" right elbow UP")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
     
     for x in range(right_wrist_center,right_wrist_left,-1):
@@ -161,12 +161,12 @@ def wave_hand_right():
         
     for x in range(right_elbow_up,right_elbow_down,-1):
         print(" right elbow down")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
         
     for x in range(right_elbow_up,right_elbow_down,-1):
         print(" right elbow down")
-        kit.servo[10].angle = x
+        kit.servo[14].angle = x
         sleep(0.018)
 
     for x in range(right_shoulder_up,right_shoulder_down,1):
@@ -506,10 +506,10 @@ def motor_test():
     
 if __name__ == "__main__":
     
-    shake_hand_left()
-    wave_hand_left()
+    #shake_hand_left()
+    #wave_hand_left()
     shake_hand_right()
-    wave_hand_left()
-    head_yes()
-    head_no()
+    #wave_hand_right()
+    #head_yes()
+    #head_no()
     
