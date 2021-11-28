@@ -53,30 +53,30 @@ def shake_hand_right():
         
     def palm_close():
         
+        kit.servo[12].angle = 100       
+        kit.servo[13].angle = 100
+
         kit.servo[12].angle = 110        
         kit.servo[13].angle = 110
-
-        kit.servo[12].angle = 130        
-        kit.servo[13].angle = 130
         
         sleep(1)
 
-        kit.servo[12].angle = 110        
-        kit.servo[13].angle = 110
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
 
         
-    def  palm_open():
+    def palm_open():
 
-        kit.servo[12].angle = 110        
-        kit.servo[13].angle = 110
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
 
-        kit.servo[12].angle = 90        
-        kit.servo[13].angle = 90
+        kit.servo[12].angle = 85        
+        kit.servo[13].angle = 85
         
         sleep(1)
 
-        kit.servo[12].angle = 110        
-        kit.servo[13].angle = 110
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
 
     palm_close()
     sleep(2)
@@ -241,27 +241,36 @@ def shake_hand_left():
         kit.servo[6].angle = x
         sleep(0.0001)
     
-    #if "__name__" == "__main__":
-    
-    kit.servo[7].angle = 110
-    kit.servo[6].angle = 110
-    sleep(1)
-    kit.servo[7].angle = 85
-    kit.servo[6].angle = 85
-    sleep(1)
-    kit.servo[7].angle = 100
-    kit.servo[6].angle = 100
-    sleep(1 )
+    def palm_close():
         
-    '''for x in range(left_thumb_close,left_thumb_open,1):
-        print("THUMB OPEN")
-        kit.servo[7].angle = x
-        sleep(0.0001)
+        kit.servo[12].angle = 100       
+        kit.servo[13].angle = 100
 
-    for x in range(left_fingers_close,left_fingers_open,1):
-        print("FINGERS open")
-        kit.servo[6].angle = x
-        sleep(0.0001)'''
+        kit.servo[12].angle = 110        
+        kit.servo[13].angle = 110
+        
+        sleep(1)
+
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
+
+        
+    def palm_open():
+
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
+
+        kit.servo[12].angle = 85        
+        kit.servo[13].angle = 85
+        
+        sleep(1)
+
+        kit.servo[12].angle = 100        
+        kit.servo[13].angle = 100
+
+    palm_close()
+    sleep(2)
+    palm_open()
 
 
     for x in range(left_elbow_up,left_elbow_down,-1):

@@ -25,7 +25,7 @@ def test3():
     sleep(1)
     kit.servo[7].angle = 100
     kit.servo[6].angle = 100
-    sleep(1 )
+    sleep(1)
     
     
     '''for x in range(180,0,-1):
